@@ -1,0 +1,1 @@
+['Legend', 'Kick-Ass 2: Con un par', 'Kick-Ass: Listo para machacar', 'El hundimiento', 'Eternal', 'Batman: Mala sangre', 'El becario', 'Regresi\xc3\xb3n', 'Vidas criminales', 'Black Mass: Estrictamente criminal', 'El rastro del delito', 'Ricki', 'Disparo letal', 'El puente de los esp\xc3\xadas', 'Copland']

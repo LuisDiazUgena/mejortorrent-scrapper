@@ -43,8 +43,6 @@ TFT.initLCD(DC, RST, LED)
 # Get the PIL Draw object to start drawing on the display buffer.
 draw = TFT.draw()
 
-global films_str
-
 def scrap():
     print ""
     url = "http://www.mejortorrent.com/torrents-de-peliculas-hd-alta-definicion.html"
@@ -69,21 +67,22 @@ def scrap():
                 if filmName not in lst:
                     lst.append(filmName)
             count += 1
-
+    films_str="\n"
     for film in range(len(lst)):
-        global films_str
         films_str += lst[film] + "\n"
+    print films_str
+    return films_str
         #print "\t" + lst[film]
 
 while 1:
+    text = scrap()
     TFT.backlite(1)
-    global films_str
     TFT.clear()
     font=ImageFont.truetype('FreeSans.ttf', 25)
     if TFT.is_landscape:
-        draw.textwrapped((0,0), films_str, 38, 20, font, "lightblue")
+        draw.textwrapped((0,0), text, 38, 20, font, "lightblue")
     else:
-        draw.textwrapped((0,0), films_str, 27, 20, font, "lightblue") # a bit narrower for portrait!
+        draw.textwrapped((0,0), text, 27, 20, font, "lightblue") # a bit narrower for portrait!
     TFT.display()
     sleep(20)
     TFT.clear()
@@ -95,4 +94,3 @@ while 1:
 #        0x0000FF   =red    BBGGRR   - note colour order
 #        "#FF0000"  =red    RRGGBB   - html style
 #        "red"      =red    html colour names, insensitive
-"""

@@ -4,6 +4,7 @@ import re
 
 from datetime import datetime
 from threading import Timer
+from time import sleep
 
 import sys
 
@@ -71,8 +72,8 @@ print "This script scrap mejortorrent to gather the last HD quality movies."
 scrap()
 doneOnce = False
 while True:
-
-    userinput = raw_input("Type \"s\" to continue, \"q\" to exit: ")
+    userinput="s"
+    #userinput = raw_input("Type \"s\" to continue, \"q\" to exit: ")"
     '''
     if (datetime.hour == 17 and datetime.minute == 30 and doneOnce == False):
         print "it's time to scrap!"
@@ -88,7 +89,8 @@ while True:
         sys.exit()
     else :
         print "type a valid option: \n\t scrap or quit"
-
+    print "Now i'm going to sleep for a while.."
+    sleep(60)
     #now = datetime.today
     #scrap()
     '''

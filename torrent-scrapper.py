@@ -7,6 +7,7 @@ from threading import Timer
 from time import sleep
 
 import sys
+from tqdm import * 
 
 now=datetime.today()
 nextTime=now.replace(day=now.day, hour=now.hour, minute= now.minute, second=now.second, microsecond=0)
@@ -91,7 +92,7 @@ while True:
         print "type a valid option: \n\t scrap or quit"
     print "Now i'm going to sleep for a while.."
     for i in tqdm(range(60)):
-        time.sleep(1)
+        sleep(1)
         #now = datetime.today
     #scrap()
     '''

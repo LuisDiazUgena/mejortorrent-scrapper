@@ -90,8 +90,9 @@ while True:
     else :
         print "type a valid option: \n\t scrap or quit"
     print "Now i'm going to sleep for a while.."
-    sleep(60)
-    #now = datetime.today
+    for i in tqdm(range(60)):
+        time.sleep(1)
+        #now = datetime.today
     #scrap()
     '''
     if (now > nextTime):
